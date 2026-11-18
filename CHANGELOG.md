@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v1.0.1 — 2026-11-18
+
+**维护**
+
+- 接入 repo-kit 机器层（`link-only`，kit 2.8.0 / spec 2.1.3）：`tools/repo-kit/`、`schema/taxonomy.json`、`schema/kit.lock.json`、`.github/workflows/repo-check.yml`
+- 只查链接 / 锚点与版本锁，内容与结论未改
+- AGENTS 里「无代码、无构建、无依赖、无 CI」更正为「CI 只做文档检查」——原句已与事实不符
+
 ## v1.0.0 — 2026-10-26
 
 首次建立四件套（README / AGENTS / DEVELOPMENT / CHANGELOG），沉淀经典款 G304 的驱动选型与配置经验。

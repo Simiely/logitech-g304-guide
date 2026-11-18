@@ -66,7 +66,7 @@ G304 只有 **1 个板载槽位**，所以板载模式下无法存多套配置�
 
 ## 目录
 
-本仓库按 knowledge-base 单项目规范采用**四件套**，目录是长出来的、不预先创建：
+本仓库按 knowledge-base 单项目规范维护，分两层：**人层四件套** + **机器层校验**。目录是长出来的、不预先创建。
 
 | 文件 | 作用 |
 |---|---|
@@ -74,3 +74,12 @@ G304 只有 **1 个板载槽位**，所以板载模式下无法存多套配置�
 | [AGENTS.md](AGENTS.md) | 给 AI 和未来的你：版本号、关键坑、约定、常用命令 |
 | [DEVELOPMENT.md](DEVELOPMENT.md) | 架构说明 + 关键问题与方案（一坑一篇） |
 | [CHANGELOG.md](CHANGELOG.md) | 版本变更记录 |
+
+机器层只做校验、不产生内容：
+
+| 文件 | 作用 |
+|---|---|
+| `tools/repo-kit/check_repo.py` | 链接 / 锚点不变量检查 |
+| `schema/taxonomy.json` | 本仓的扫描配置与词表 |
+| `schema/kit.lock.json` | kit 版本 + 每文件哈希（用 `update-repo-kit.ps1 -Check` 验） |
+| `.github/workflows/repo-check.yml` | 把上面几项接进 CI |
